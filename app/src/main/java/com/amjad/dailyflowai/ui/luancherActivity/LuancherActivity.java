@@ -1,14 +1,13 @@
-package com.amjad.dailyflowai;
+package com.amjad.dailyflowai.ui.luancherActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.os.Handler;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.amjad.dailyflowai.ui.onboardActivity.OnboardActivity;
+import com.amjad.dailyflowai.R;
 
 public class LuancherActivity extends AppCompatActivity {
 

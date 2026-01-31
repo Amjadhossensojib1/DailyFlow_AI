@@ -1,15 +1,15 @@
-package com.amjad.dailyflowai;
+package com.amjad.dailyflowai.ui.onboardActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
+
+import com.amjad.dailyflowai.ui.loginAcivity.LoginActivity;
+import com.amjad.dailyflowai.R;
+import com.amjad.dailyflowai.ui.signupActivity.SignUpActivity;
 
 public class OnboardActivity extends AppCompatActivity {
     private Button btnSignIn,btnSignUp;
@@ -25,13 +25,13 @@ public class OnboardActivity extends AppCompatActivity {
         btnSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OnboardActivity.this,MainActivity.class));
+                startActivity(new Intent(OnboardActivity.this, LoginActivity.class));
             }
         });
         btnSignUp.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(OnboardActivity.this,MainActivity.class));
+                startActivity(new Intent(OnboardActivity.this, SignUpActivity.class));
             }
         });
 

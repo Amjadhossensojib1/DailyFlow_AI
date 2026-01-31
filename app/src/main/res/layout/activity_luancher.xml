@@ -6,8 +6,8 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".LuancherActivity"
-    android:background="@color/bgc">
+    tools:context=".ui.luancherActivity.LuancherActivity"
+    android:background="@color/black">
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
