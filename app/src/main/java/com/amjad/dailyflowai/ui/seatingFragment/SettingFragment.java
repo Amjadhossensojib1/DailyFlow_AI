@@ -1,4 +1,4 @@
-package com.amjad.dailyflowai;
+package com.amjad.dailyflowai.ui.seatingFragment;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import com.amjad.dailyflowai.R;
 
 
 public class SettingFragment extends Fragment {

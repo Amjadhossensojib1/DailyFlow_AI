@@ -8,7 +8,7 @@ import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.amjad.dailyflowai.DashboardActivity;
+import com.amjad.dailyflowai.ui.DashboardActivity.DashboardActivity;
 import com.amjad.dailyflowai.R;
 import com.amjad.dailyflowai.ui.signupActivity.SignUpActivity;
 

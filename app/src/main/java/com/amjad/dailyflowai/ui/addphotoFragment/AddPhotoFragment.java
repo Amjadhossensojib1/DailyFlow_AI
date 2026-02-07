@@ -1,4 +1,4 @@
-package com.amjad.dailyflowai;
+package com.amjad.dailyflowai.ui.addphotoFragment;
 
 import android.os.Bundle;
 
@@ -8,9 +8,10 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
+import com.amjad.dailyflowai.R;
 
-public class HomeFragment extends Fragment {
 
+public class AddPhotoFragment extends Fragment {
 
 
     @Override
@@ -23,7 +24,7 @@ public class HomeFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        View view =  inflater.inflate(R.layout.fragment_home, container, false);
+        View view= inflater.inflate(R.layout.fragment_add_photo, container, false);
 
         return view;
     }

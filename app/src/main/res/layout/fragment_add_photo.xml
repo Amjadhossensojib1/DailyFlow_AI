@@ -4,12 +4,14 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".AddPhotoFragment">
+    tools:context=".ui.addphotoFragment.AddPhotoFragment"
+    android:background="@color/black">
 
    <TextView
        android:layout_width="match_parent"
        android:layout_height="wrap_content"
        android:text="this is add photo fragment"
-       android:gravity="center"/>
+       android:gravity="center"
+       android:textColor="@color/white"/>
 
 </LinearLayout>

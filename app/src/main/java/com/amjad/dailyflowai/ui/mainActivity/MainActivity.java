@@ -1,26 +1,45 @@
 package com.amjad.dailyflowai.ui.mainActivity;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.speech.RecognizerIntent;
 
-import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.graphics.Insets;
-import androidx.core.view.ViewCompat;
-import androidx.core.view.WindowInsetsCompat;
 
 import com.amjad.dailyflowai.R;
+import com.amjad.dailyflowai.ui.homeFragment.HomeFragment;
+
+import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
+
+    HomeFragment homeFragment = new HomeFragment();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        EdgeToEdge.enable(this);
         setContentView(R.layout.activity_main);
-        ViewCompat.setOnApplyWindowInsetsListener(findViewById(R.id.main), (v, insets) -> {
-            Insets systemBars = insets.getInsets(WindowInsetsCompat.Type.systemBars());
-            v.setPadding(systemBars.left, systemBars.top, systemBars.right, systemBars.bottom);
-            return insets;
-        });
+
+        if (savedInstanceState == null) {
+            getSupportFragmentManager()
+                    .beginTransaction()
+                    .replace(R.id.fragment_container, homeFragment)
+                    .commit();
+        }
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+
+        if (requestCode == 100 && resultCode == RESULT_OK && data != null) {
+
+            ArrayList<String> result =
+                    data.getStringArrayListExtra(RecognizerIntent.EXTRA_RESULTS);
+
+            if (result != null && !result.isEmpty()) {
+                homeFragment.onSpeechResult(result.get(0));
+            }
+        }
     }
 }
